@@ -24,7 +24,7 @@ export function Blog(){
             <div className="body-blog">
                 <Carousel
                     centerMode={true}
-                    width={'72em'}
+                    width={'98vw'}
                     centerSlidePercentage={32}
                     showIndicators={false}
                     showStatus={false}

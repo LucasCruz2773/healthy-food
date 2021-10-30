@@ -6,6 +6,7 @@ import { Blog } from "../components/Blog";
 import { Join } from "../components/Join";
 
 import '../styles/main.css'
+import { Footer } from "../components/Footer";
 
 export function Main() {
     return (
@@ -16,6 +17,7 @@ export function Main() {
             <BestServices />
             <Blog />
             <Join />
+            <Footer />
         </div>
     )
 }
