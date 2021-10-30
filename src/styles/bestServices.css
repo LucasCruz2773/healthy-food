@@ -1,0 +1,47 @@
+.content-services {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFF;
+}
+
+.service-img-content {
+    display: flex;
+    flex: 1;
+}
+
+.service-img-content img {
+    height: 100vh;
+}
+
+.service {
+    display: flex;
+    flex: 1;
+    line-height: 1.6em;
+}
+
+.service-texts {
+    display: flex;
+    flex-direction: column;
+    width: 25.5em;
+}
+
+.service-title {
+    font: bold 2em 'Montserrat', sans-serif;
+    color: #2D3561;
+    margin-bottom: 1em;
+}
+
+.service-text {
+    font: 1em 'Mulish', sans-serif;
+    color: #BCBCBC;
+    word-spacing: 3px;
+    line-height: 1.5em;
+}
+
+.button-service {
+    margin-top: 2em;
+}

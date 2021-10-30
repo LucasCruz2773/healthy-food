@@ -1,0 +1,64 @@
+.content-recipes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FAFAFC;
+}
+
+.header-recipes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 510px;
+}
+
+.title-recipes {
+    font: bold 2em 'Montserrat', sans-serif;
+    color: #1D164D;
+}
+
+.description-recipes {
+    margin-top: 1em;
+    font: 1em 'Mulish', sans-serif;
+    color: #9E9BAF;
+    text-align: center;
+}
+
+.list-recipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.recipe {
+    background-color: #FFF;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    width: 33em;
+    box-shadow: 0px 15px 20px rgba(29, 22, 77, 0.08);
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2em;
+    width: 12em;
+}
+
+.recipe-title {
+    font: bold 1.5em 'Montserrat', sans-serif;
+    color: #1D164D;
+    margin-bottom: 1em;
+}

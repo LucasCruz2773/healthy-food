@@ -1,15 +1,13 @@
 .content {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
     height: 98vh;
-    width: 98vw;
+    width: 100%;
 }
 
 .home {
     display: flex;
     flex-direction: row;
     flex: 1;
+    height: 100vh;
 }
 
 .search-recipe {
@@ -17,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    flex: 4;
 }
 
 .content-search {
@@ -39,15 +37,6 @@
     width: 100%;
 }
 
-.home-input {
-    display: flex;
-    flex: 1;
-    border-radius: 5px;
-    border-color: #2D3561;
-    border-width: 1px;
-    height: 3.2em;
-    padding: 1em;
-}
 
 .button-search {
     margin-left: 1em;
@@ -59,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .home-text {
@@ -68,12 +58,10 @@
 
 .home-aside {
     display: flex;
-    flex: 1;
+    flex: 6;
 }
 
 .home-img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 96%;
+    width: 100%;
+    align-self: flex-start;
 }

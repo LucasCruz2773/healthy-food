@@ -1,0 +1,9 @@
+.input-food {
+    display: flex;
+    flex: 1;
+    border-radius: 5px;
+    border-color: #2D3561;
+    border-width: 1px;
+    height: 3.2em;
+    padding: 1em;
+}

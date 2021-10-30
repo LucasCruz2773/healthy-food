@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: absolute;
+    width: 98vw;
+    top: 0;
+    left: 0;
 }
 
 .header-title {
@@ -39,6 +43,7 @@
     font: bold 1em 'Mulish', sans-serif;
     color: #FFFFFF;
     z-index: 1;
+    cursor: pointer;
 }
 
 .register-option {

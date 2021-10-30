@@ -1,18 +1,26 @@
-import { Button } from "../components/Button";
-import { Input } from "../components/Input";
+//import { useHistory } from 'react-router-dom';
+
+import { Button } from "./Button";
+import { Input } from "./Input";
 
 import HomeImg from '../assets/images/Illustration.svg';
 import '../styles/home.css';
 
-export function Recipes() {
+export function Home() {
+    // const history = useHistory();
+
+    // function navigateToRegister(){
+    //     history.push('/register');
+    // }
+
     return(
-        <div className="content">
+        <div>
             <main className="home">
                 <div className="search-recipe">
                     <div className="content-search">
                         <p className="home-text">Ready for Trying a new recipe?</p>
                         <div className="home-search">
-                            <Input className="home-input" type="text" placeholder="Search healthy recipes" />
+                            <Input type="text" placeholder="Search healthy recipes" />
                             <Button className="button-search">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <g id="Icon" transform="translate(-195 -616)">
