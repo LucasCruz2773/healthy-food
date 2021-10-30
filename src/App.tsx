@@ -6,7 +6,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" exact={true} component={Main} />
+      <Route path="/" exact component={Main} />
       <Route path="/register" exact={true} component={Register} />
     </BrowserRouter>
     

@@ -34,7 +34,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 68%;
     z-index: 1;
     height: 3.5em;
 }
@@ -47,8 +46,8 @@
 }
 
 .register-option {
-    width: 29%;
     height: 100%;
+    padding: 0.8em;
     background-color: #FFF;
     border-radius: 5px;
     display: flex;
