@@ -1,10 +1,51 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import InputMask from 'react-input-mask';
+
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
 import '../styles/register.css'
-import { Link } from 'react-router-dom';
 
 export function Register() {
+
+    const [name, setName] = useState('');
+    const [cpf, setCpf] = useState('');
+    const [date, setDate] = useState('');
+    const [cep, setCep] = useState('');
+    const [street, setStreet] = useState('');
+    const [district, setDistrict] = useState('');
+    const [number, setNumber] = useState('');
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+
+    const register = () => {
+        console.log(name);
+        console.log(cpf);
+        console.log(date);
+        console.log(cep);
+        console.log(street);
+        console.log(district);
+        console.log(number);
+        console.log(city);
+        console.log(state);
+    }
+
+    const findCep = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCep(e.target.value);
+        fetch('http://viacep.com.br/ws/'+e.target.value.split('-').join('')+'/json/', {mode: 'cors'})
+            .then((response) => response.json())
+            .then((data) => {
+                if(!data.erro){
+                    setStreet(data.logradouro);
+                    setDistrict(data.bairro);
+                    setState(data.uf)
+                    setCity(data.localidade);
+                }
+            })
+            .catch((err) => err)
+    }
+
     return (
         <div className="register-body">
             <aside className="register-image-content">
@@ -17,26 +58,26 @@ export function Register() {
             <div className="register-content">
                 <h1>Register</h1>
                 <div className="register-row">
-                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Nome" />
-                    <Input className="input-register" style={{marginLeft: 20}} type="text" placeholder="CPF" />
+                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} />
+                    <InputMask className="input-register" style={{marginLeft: 20}} mask="999.999.999-99" placeholder="CPF" value={cpf} onChange={(e) => setCpf(e.target.value)} />
                 </div>
                 <div className="register-row">
-                    <Input className="input-register" style={{width: '100%'}} type="date" placeholder="Data de Nascimento" />
-                    <Input className="input-register" style={{width: '100%', marginLeft: 20}} type="text" placeholder="CEP" />
+                    <Input className="input-register" style={{width: '100%'}} type="date" placeholder="Data de Nascimento" value={date} onChange={(e) => setDate(e.target.value)} />
+                    <InputMask className="input-register" style={{width: '100%', marginLeft: 20}} mask="99999-999" placeholder="CEP" value={cep} onChange={(e) => findCep(e)} />
                 </div>
                 <div className="register-row">
-                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Rua" />
+                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Rua" value={street} onChange={(e) => setStreet(e.target.value)} />
                 </div>
                 <div className="register-row">
-                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Bairro" />
-                    <Input className="input-register" style={{width: '100%', marginLeft: 20}} type="text" placeholder="Nº" />
+                    <Input className="input-register" style={{width: '100%'}} type="text" placeholder="Bairro" value={district} onChange={(e) => setDistrict(e.target.value)} />
+                    <Input className="input-register" style={{width: '100%', marginLeft: 20}} type="text" placeholder="Nº" value={number} onChange={(e) => setNumber(e.target.value)} />
                 </div>
                 <div className="register-row">
-                    <Input className="input-register" style={{width: '70%'}} type="text" placeholder="Cidade" />
-                    <Input className="input-register" style={{width: '30%', marginLeft: 20}} type="text" placeholder="Estado" />
+                    <Input className="input-register" style={{width: '70%'}} type="text" placeholder="Cidade" value={city} onChange={(e) => setCity(e.target.value)} />
+                    <Input className="input-register" style={{width: '30%', marginLeft: 20}} type="text" placeholder="Estado" value={state} onChange={(e) => setState(e.target.value)} />
                 </div>
                 <div className="register-row">
-                    <Button style={{flex: 1, marginTop: '1em'}}>Register</Button>
+                    <Button style={{flex: 1, marginTop: '1em'}} onClick={register} >Register</Button>
                 </div>
             </div>
         </div>
