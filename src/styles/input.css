@@ -1,3 +1,8 @@
+.input-label-food {
+    display: flex;
+    flex: 1;
+}
+
 .input-food {
     display: flex;
     flex: 1;

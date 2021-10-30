@@ -7,12 +7,6 @@ import HomeImg from '../assets/images/Illustration.svg';
 import '../styles/home.css';
 
 export function Home() {
-    // const history = useHistory();
-
-    // function navigateToRegister(){
-    //     history.push('/register');
-    // }
-
     return(
         <div>
             <main className="home">

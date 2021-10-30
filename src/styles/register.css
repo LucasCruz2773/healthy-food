@@ -1,0 +1,57 @@
+.register-body {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 98vh;
+    width: 98vw;
+}
+
+.register-image-content {
+    flex: 1;
+    background-image: url('../assets/images/register.jpg');
+    background-size: cover;
+}
+
+.back-to-home {
+    width: 3em;
+    height: 3em;
+    border-radius: 5px;
+    background-color: #BADC58;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.8em;
+    margin-top: 0.8em;
+}
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 4em;
+    margin-right: 3em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.register-content h1 {
+    margin-bottom: 1em;
+}
+
+.register-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.input-register {
+    display: flex;
+    border-radius: 5px;
+    border-color: #2D3561;
+    border-width: 1px;
+    height: 3.2em;
+    padding: 1em;
+}
