@@ -55,3 +55,15 @@
     height: 3.2em;
     padding: 1em;
 }
+
+@media screen and (max-width: 1024px) {
+    .back-to-home {
+        padding: 0.5em;
+        position: absolute;
+    }
+
+    .register-content {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}

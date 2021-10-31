@@ -14,7 +14,7 @@ export function Blog(){
     return(
         <div className="blog-content">
             <div className="header-blog">
-                <h1 className="title-blog">Read Our Blog</h1>
+                <h1 className="title-blog" id="blog">Read Our Blog</h1>
                 <p className="description-blog">
                     Far far away, behind the word mountains,  
                     far from the countries Vokalia and Consonantia, 

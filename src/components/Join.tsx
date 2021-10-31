@@ -10,7 +10,7 @@ export function Join() {
         <div className="join-body">
             <div className="join-content">
                 <div className="join-member">
-                    <h1>Join our membership to get special offer</h1>
+                    <h1 id="join">Join our membership to get special offer</h1>
                     <div className="join-email">
                         <Input type="text" placeholder="Enter your email address" />
                         <Button style={{marginLeft: '1em'}}>Join</Button>     

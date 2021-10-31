@@ -43,9 +43,9 @@ export function Header(){
             </div>
             <div className="header-options">
                 <div className="content-options" style={{width: menuWidth}}>
-                    <h2 className="text-option">HEALTHY RECIPES</h2>
-                    <h2 className="text-option">BLOG</h2>
-                    <h2 className="text-option">JOIN</h2>
+                    <a href="#best-recipes" className="text-option">HEALTHY RECIPES</a>
+                    <a href="#blog" className="text-option">BLOG</a>
+                    <a href="#join" className="text-option">JOIN</a>
                     { user ?
                         <>
                             <h2 className="text-option" onClick={logout}>LOGOUT</h2>

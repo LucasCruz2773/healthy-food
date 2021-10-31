@@ -11,7 +11,7 @@ export function Recipes() {
     return(
         <div className="content-recipes">
             <div className="header-recipes">
-                <h1 className="title-recipes">Our Best Recipes</h1>
+                <h2 className="title-recipes" id="best-recipes">Our Best Recipes</h2>
                 <p className="description-recipes">
                     Far far away, behind the word mountains,  
                     far from the countries Vokalia and Consonantia, 
