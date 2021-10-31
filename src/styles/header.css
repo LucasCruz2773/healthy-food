@@ -56,3 +56,33 @@
     font: bold 1em 'Mulish', sans-serif;
     color: #BADC58;
 }
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 4em;
+        padding: 0.5em;
+    }
+    .home-aside {
+        flex: 0;
+    }
+    .header-title {
+        width: 20%;
+        flex: 0;
+    }
+    .header-title-text {
+        font: bold 1em 'Montserrat', sans-serif;
+    }
+    .content-options {
+        width: 80% !important;
+    }
+    .text-option {
+        font: bold 0.8em 'Mulish', sans-serif;
+        margin-left: 0.5em;
+    }
+    .register-option {
+        height: 50%;
+        padding: 0.4em;
+        font: bold 0.8em 'Mulish', sans-serif;
+        margin-left: 0.8em;
+    }
+}

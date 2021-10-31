@@ -1,7 +1,7 @@
-import { BlogItem } from './BlogItem';
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+
+import { BlogItem } from './BlogItem';
 
 import BlogImg1 from '../assets/images/blog_image_1.svg';
 import BlogImg2 from '../assets/images/bloco_image_2.svg';
@@ -25,7 +25,7 @@ export function Blog(){
                 <Carousel
                     centerMode={true}
                     width={'98vw'}
-                    centerSlidePercentage={32}
+                    centerSlidePercentage={window.innerWidth >= 1024 ? 32 : 100}
                     showIndicators={false}
                     showStatus={false}
                     renderArrowPrev={(onClickHandler, hasPrev, label) =>

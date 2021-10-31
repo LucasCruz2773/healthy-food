@@ -108,3 +108,17 @@
 .arrowStyles svg {
     color: #BADC58;
 }
+
+@media screen and (max-width: 1024px) {
+    .blog-content {
+        padding: 1em;
+        margin-top: 1em;
+        height: auto;
+    }
+    .header-blog {
+        width: auto;
+    }
+    .blog-item {
+        width: auto;
+    }
+}

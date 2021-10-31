@@ -41,3 +41,19 @@
     flex: 1;
     height: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+    .join-body {
+        height: auto;
+        flex-direction: column-reverse;
+        
+    }
+    .join-image-content img{
+        width: 100%;
+    }
+    .join-member {
+        margin-left: 0;
+        width: auto;
+        padding: 2em;
+    }
+}

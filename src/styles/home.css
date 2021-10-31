@@ -65,3 +65,21 @@
     width: 100%;
     align-self: flex-start;
 }
+
+@media screen and (max-width: 1024px) {
+    .home {
+        flex-direction: column-reverse;
+    }
+    .content-search {
+        padding: 1em;
+        margin-left: 0px;
+        width: 20em;
+    }
+    .home-aside {
+        justify-content: flex-end;
+        flex: 0;
+    }
+    .home-img {
+        width: 80%;
+    }
+}

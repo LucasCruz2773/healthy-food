@@ -37,6 +37,7 @@ export function Header(){
 
     return(
         <div className="header">
+            
             <div className="header-title">
                 <h1 className="header-title-text">Healthy Food</h1>
             </div>
@@ -48,7 +49,7 @@ export function Header(){
                     { user ?
                         <>
                             <h2 className="text-option" onClick={logout}>LOGOUT</h2>
-                            <h2 className="register-option">WELCOME {user.name.toUpperCase()}</h2>
+                            <h2 className="register-option">WELCOME {user.name.split(" ")[0].toUpperCase()}</h2>
                         </>
                         : <Link to="/register" className="register-option">REGISTER</Link>
                     }
