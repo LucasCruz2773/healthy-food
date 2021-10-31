@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 import '../styles/header.css';
 
@@ -21,17 +22,20 @@ export function Header(){
     const [user, setUser] = useState<User | null>();
     const [menuWidth, setMenuWidth] = useState('68%');
     const history = useHistory();
+    const cookies = new Cookies();
 
     useEffect(() => {
         let userLocal = localStorage.getItem('user');
-        if(userLocal){
-            setUser(JSON.parse(userLocal));
+        let userCookies = cookies.get("user");
+        if(userCookies){
+            setUser(userCookies);
             setMenuWidth('100%')
         }
     },[]);
 
     const logout = () => {
         localStorage.removeItem("user");
+        cookies.remove("user");
         history.go(0);
     }
 

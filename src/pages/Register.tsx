@@ -4,6 +4,7 @@ import InputMask from 'react-input-mask';
 import swal from 'sweetalert';
 import { cpf } from 'cpf-cnpj-validator'; 
 import { useHistory } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
@@ -35,9 +36,11 @@ export function Register() {
     const [state, setState] = useState('');
 
     const history = useHistory();
+    const cookies = new Cookies();
 
     const register = () => {
         if(name && cpfUser && date && cep && street && district && number && city && state){
+            
             let cpfNoFormat = cpfUser.replaceAll(".", "");
             cpfNoFormat = cpfNoFormat.replace(".", "");
             if(cpf.isValid(cpfNoFormat)){
@@ -52,7 +55,9 @@ export function Register() {
                     city,
                     state
                 }
-                localStorage.setItem('user', JSON.stringify(user));
+                let userStringfy = JSON.stringify(user);
+                localStorage.setItem('user', userStringfy);
+                cookies.set('user', userStringfy, { path: '/' });
                 swal({
                     title: "Success!",
                     text: "Successfully registered!",
