@@ -76,20 +76,11 @@ export function Register() {
                 dangerMode: true,
               })
         }
-        console.log(name);
-        console.log(cpf);
-        console.log(date);
-        console.log(cep);
-        console.log(street);
-        console.log(district);
-        console.log(number);
-        console.log(city);
-        console.log(state);
     }
 
     const findCep = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCep(e.target.value);
-        fetch('http://viacep.com.br/ws/'+e.target.value.replace("-", "")+'/json/', {mode: 'cors'})
+        fetch('https://viacep.com.br/ws/'+e.target.value.replace("-", "")+'/json/', {mode: 'cors'})
             .then((response) => response.json())
             .then((data) => {
                 if(!data.erro){
