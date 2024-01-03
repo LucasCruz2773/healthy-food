@@ -21,17 +21,17 @@ type User = {
 export function Header(){
     const [user, setUser] = useState<User | null>();
     const [menuWidth, setMenuWidth] = useState('68%');
+    const [cookies, ] = useState(new Cookies())
     const history = useHistory();
-    const cookies = new Cookies();
 
     useEffect(() => {
-        let userLocal = localStorage.getItem('user');
+        // let userLocal = localStorage.getItem('user');
         let userCookies = cookies.get("user");
         if(userCookies){
             setUser(userCookies);
             setMenuWidth('100%')
         }
-    },[]);
+    },[cookies]);
 
     const logout = () => {
         localStorage.removeItem("user");
